@@ -22,7 +22,7 @@
     # OUT: UP / DOWN / NO TREND (strings)
     #If no trend defined, go back to POINT ECHO
 
-    #LOOP until timeout reached (ex. 30 mins) or go back to beginning
+    #LOOP until timeout reached (ex. 30 mins)
     # POINT 2
     # STEP 1:load 5 min candles
         # IN: asset (or whatever the API needs), time range*, candle size*
@@ -65,7 +65,7 @@
     # IN: current gains (losing $)
     # OUT: True / False
 
-# ELIF check stochastic crossing. Pull OHLC data. If True -> close position
+# ELIF check stochastic crossing. If True -> close position
     # STEP 1: pull 5 minutes OHLC data
         # IN: asset
         # OUT: OHLC data (5 min candles)
@@ -83,10 +83,9 @@
 
 # check position: see if the position exists
     # IN: position ID
-    # OUT: True (confirmed) / False (not confirmed)
+    # OUT: True (still　exists!) / False (does not exist)
     # if False, abort / go back to SUBMIT ORDER
 
 # wait 15 mins
 
 # end
-
